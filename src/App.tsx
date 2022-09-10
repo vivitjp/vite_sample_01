@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import MyForm from "./Components/features/forms/MyForm"
+import { DynastySection } from "./Components/features/section/DynastySection"
 import History from "./Components/features/section/History"
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       </div>
 
       <History />
+      <DynastySection />
     </div>
   )
 }
