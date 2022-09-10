@@ -1,34 +1,6 @@
-import { useState } from "react"
-import CardA from "./Components/features/Card/CardA"
+import { useEffect, useState } from "react"
 import MyForm from "./Components/features/forms/MyForm"
-
-type Data = {
-  name: string
-  value: number
-}
-
-const data: Data[] = [
-  {
-    name: "小早川隆景",
-    value: 234,
-  },
-  {
-    name: "足利義昭",
-    value: 5432,
-  },
-  {
-    name: "黒田官兵衛",
-    value: 8367,
-  },
-  {
-    name: "斎藤道三",
-    value: 83,
-  },
-  {
-    name: "織田信長",
-    value: 275,
-  },
-]
+import History from "./Components/features/section/History"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -45,13 +17,10 @@ function App() {
         <div className="ml-2 px-5 py-2 border">{count}</div>
       </div>
       <div className="flex flex-row border">
-        {data.map((n) => (
-          <CardA name={n.name} value={n.value} />
-        ))}
-      </div>
-      <div className="flex flex-row border">
         <MyForm />
       </div>
+
+      <History />
     </div>
   )
 }
