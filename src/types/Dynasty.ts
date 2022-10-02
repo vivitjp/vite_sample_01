@@ -1,5 +1,5 @@
 export type Dynasty = {
-  Id: number
+  id: number
   name: string
   year: number
 }

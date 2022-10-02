@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="flex flex-col w-full border border-yellow-500">
-      <div className="flex flex-row border p-3">
+      {/* <div className="flex flex-row border p-3">
         <button
           className="border shadow px-5 py-2 bg-slate-200 rounded"
           onClick={() => setCount((count) => count + 1)}
@@ -19,10 +19,10 @@ function App() {
       </div>
       <div className="flex flex-row border">
         <MyForm />
-      </div>
+      </div> */}
 
-      <History />
-      <DynastySection />
+      {/* <History />
+      <DynastySection /> */}
     </div>
   )
 }
