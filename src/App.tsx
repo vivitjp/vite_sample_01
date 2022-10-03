@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import MyForm from "./Components/features/forms/MyForm"
+import { PeopleList } from "./Components/features/People/PeopleList"
 import { DynastySection } from "./Components/features/section/DynastySection"
 import History from "./Components/features/section/History"
 
@@ -23,6 +24,7 @@ function App() {
 
       {/* <History />
       <DynastySection /> */}
+      <PeopleList />
     </div>
   )
 }
