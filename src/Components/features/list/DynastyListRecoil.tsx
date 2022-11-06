@@ -4,7 +4,7 @@ import { dynastyListState } from "../../../atoms/dynasty"
 import { Dynasty } from "../../../types/Dynasty"
 import { DynastyForm } from "../forms/DynastyForm"
 
-export const DynastyList = () => {
+export const DynastyListRecoil = () => {
   const [isOpened, setIsOpened] = useState<boolean>(false)
   const [dynastyList] = useRecoilState(dynastyListState)
   const [selItem, setSelItem] = useState<Dynasty>(null!)

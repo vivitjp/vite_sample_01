@@ -1,8 +1,7 @@
-import React from "react"
 import HistoryCard from "../Card/HistoryCard"
 import { useDataContext } from "../../../context/DataProvider"
 
-const History = (): JSX.Element => {
+export const HistoryContext = (): JSX.Element => {
   const { historyMap } = useDataContext()
 
   return (
@@ -18,5 +17,3 @@ const History = (): JSX.Element => {
     </div>
   )
 }
-
-export default History

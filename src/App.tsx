@@ -1,32 +1,24 @@
-import { useEffect, useState } from "react"
-import MyForm from "./Components/features/forms/MyForm"
-import { PeopleList } from "./Components/features/People/PeopleList"
-import { DynastySection } from "./Components/features/section/DynastySection"
-import History from "./Components/features/section/History"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Contexts } from "./pages/Contexts"
+import { Form } from "./pages/Form"
+import { LayoutEffectPage } from "./pages/LayoutPage"
+import { PageMemo } from "./pages/PageMemo"
+import { SWR } from "./pages/SWR"
+import { UseRef } from "./pages/UseRef"
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="flex flex-col w-full border border-yellow-500">
-      {/* <div className="flex flex-row border p-3">
-        <button
-          className="border shadow px-5 py-2 bg-slate-200 rounded"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Counter
-        </button>
-        <div className="ml-2 px-5 py-2 border">{count}</div>
-      </div>
-      <div className="flex flex-row border">
-        <MyForm />
-      </div> */}
-
-      {/* <History />
-      <DynastySection /> */}
-      <PeopleList />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Contexts />} />
+          <Route path="/memo" element={<PageMemo />} />
+          <Route path="/form" element={<Form />} />
+          <Route path="/SWR" element={<SWR />} />
+          <Route path="/useref" element={<UseRef />} />
+          <Route path="/layoutEffect" element={<LayoutEffectPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App

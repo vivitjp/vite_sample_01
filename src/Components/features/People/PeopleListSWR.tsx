@@ -1,6 +1,6 @@
 import { usePeople, type Person } from "./usePeople"
 
-export const PeopleList = () => {
+export const PeopleListSWR = () => {
   const { people, isLoading, isError } = usePeople()
 
   return (
